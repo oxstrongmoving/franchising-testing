@@ -1,0 +1,12 @@
+node_modules/
+temporary screenshots/
+.DS_Store
+.claude/
+mypieceofcakemove.com_.png
+youmoveme.com_.png
+llms.txt
+package.json
+package-lock.json
+screenshot.mjs
+serve.mjs
+CLAUDE.md
