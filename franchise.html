@@ -414,6 +414,9 @@
       #right-column h2 {
         font-size: 1.65rem !important;
       }
+      .market-investment-row {
+        grid-template-columns: 1fr !important;
+      }
     }
 
     @media (max-width: 900px) {
@@ -847,7 +850,7 @@
             <label class="form-label">Phone Number *</label>
             <input class="form-input" type="tel" placeholder="(555) 000-0000" />
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
+          <div class="market-investment-row" style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
             <div>
               <label class="form-label">Desired Market / City *</label>
               <input class="form-input" type="text" placeholder="e.g. Tampa, FL" />
