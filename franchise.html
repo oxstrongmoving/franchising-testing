@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franchise Opportunities — Ox Strong Moving</title>
+  <meta name="description" content="Own an Ox Strong Moving franchise. Proven business model, strong brand, and a thriving industry. Join Florida's fastest-growing moving company." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --pink:        #EE3B7D;
+      --pink-dark:   #C62D67;
+      --pink-light:  #F5649A;
+      --pink-lighter:#FBAACB;
+      --dark:        #434444;
+      --gray:        #5A5A5A;
+      --light:       #F5F4F2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--dark);
+      background: #fff;
+      margin: 0;
+    }
+
+    h1, h2, h3, h4, .heading {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--pink);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 68px;
+    }
+
+    .nav-logo img { height: 96px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      padding: 0.25rem 0;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transition: width 0.25s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    .nav-links a:hover { color: #fff; }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      background: #fff !important;
+      color: var(--pink) !important;
+      padding: 0.55rem 1.25rem;
+      border-radius: 9999px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+
+    .nav-cta::after { display: none !important; }
+
+    .nav-cta:hover {
+      background: #f0f0f0 !important;
+      color: var(--pink-dark) !important;
+      transform: translateY(-1px);
+    }
+
+    .nav-phone {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-phone:hover { color: #fff; }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pink);
+    }
+
+    /* ── BUTTONS ── */
+    .btn-pink {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--pink);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.85rem 2rem;
+      border: none;
+      border-radius: 9999px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(238,59,125,0.32), 0 1px 4px rgba(238,59,125,0.18);
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s, filter 0.2s;
+    }
+
+    .btn-pink:hover {
+      background: var(--pink-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(238,59,125,0.45), 0 2px 8px rgba(238,59,125,0.25);
+    }
+
+    .btn-pink:active { transform: translateY(0); }
+    .btn-pink:focus-visible { outline: 3px solid var(--pink-lighter); outline-offset: 3px; }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--pink);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.85rem 2rem;
+      border: 2px solid var(--pink);
+      border-radius: 9999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--pink);
+      border-color: var(--pink);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(238,59,125,0.45), 0 2px 8px rgba(238,59,125,0.25);
+    }
+
+    .btn-outline:focus-visible { outline: 3px solid var(--pink-lighter); outline-offset: 3px; }
+
+    /* ── HERO CTA CARD ── */
+    .hero-cta-card {
+      display: inline-block;
+      background: #fff;
+      color: var(--dark);
+      border: 2px solid rgba(0,0,0,0.06);
+      border-radius: 20px;
+      padding: 1rem 1.75rem;
+      text-decoration: none;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      transition: background 0.25s cubic-bezier(0.34,1.56,0.64,1),
+                  color 0.25s ease,
+                  border-color 0.25s ease,
+                  transform 0.2s cubic-bezier(0.34,1.56,0.64,1),
+                  box-shadow 0.25s ease;
+    }
+
+    .hero-cta-card:hover {
+      background: var(--pink);
+      border-color: var(--pink);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(238,59,125,0.22), 0 2px 8px rgba(238,59,125,0.12);
+    }
+
+    .hero-cta-card:active { transform: translateY(0); }
+    .hero-cta-card:focus-visible { outline: 3px solid var(--pink-lighter); outline-offset: 3px; }
+
+    /* ── FORM INPUTS ── */
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--dark);
+      background: #fff;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-input:focus { border-color: var(--pink); }
+    .form-input::placeholder { color: #aaa; }
+
+    .form-label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gray);
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── STEP NUMBERS ── */
+    .step-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--pink);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 14px rgba(238,59,125,0.28);
+    }
+
+    /* ── CARD ── */
+    .feature-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+      border: 1px solid rgba(0,0,0,0.07);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(238,59,125,0.18), 0 2px 12px rgba(238,59,125,0.1), 0 0 0 1px rgba(238,59,125,0.08);
+    }
+
+    /* ── STAT PILL ── */
+    .stat-pill {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    /* ── CHECKMARK LIST ── */
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--gray);
+    }
+
+    .check-list li::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--pink);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── PHOTO GRID ── */
+    .photo-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── HERO GRAIN ── */
+    .grain {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* ── DIVIDER DOT ── */
+    .dot-divider {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.75rem 0;
+    }
+    .dot-divider span {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--pink-lighter);
+      display: inline-block;
+    }
+    .dot-divider span:nth-child(2) { background: var(--pink); }
+
+    /* ── FAQ / ACCORDION ── */
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+
+    /* ── OFFER ACCORDION ── */
+    .offer-item { border-bottom: 1px solid #ebebeb; }
+    .offer-item:last-child { border-bottom: none; }
+    .offer-item summary {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1.5rem 0;
+      user-select: none;
+    }
+    .offer-item summary:hover h3 { opacity: 0.75; }
+    .offer-icon-check { display: none; flex-shrink: 0; }
+    .offer-icon-plus  { display: block; flex-shrink: 0; }
+    .offer-item[open] .offer-icon-plus  { display: none; }
+    .offer-item[open] .offer-icon-check { display: block; }
+    .offer-body-wrap {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.32s ease;
+    }
+    .offer-item[open] .offer-body-wrap,
+    .offer-item.closing .offer-body-wrap {
+      grid-template-rows: 1fr;
+    }
+    .offer-item.closing .offer-body-wrap {
+      grid-template-rows: 0fr;
+    }
+    .offer-body {
+      overflow: hidden;
+      padding: 0 0 0 2rem;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--gray);
+      margin: 0;
+      opacity: 0;
+      transition: opacity 0.28s ease, padding-bottom 0.32s ease;
+    }
+    .offer-item[open] .offer-body {
+      opacity: 1;
+      padding-bottom: 1.5rem;
+    }
+    .offer-item.closing .offer-body {
+      opacity: 0;
+      padding-bottom: 0;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: var(--pink-lighter); border-radius: 3px; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-phone { display: none; }
+      .nav-cta {
+        font-size: 0.72rem !important;
+        padding: 0.45rem 0.9rem !important;
+      }
+    }
+
+    @media (max-width: 900px) {
+      /* Collapse split layout to single column */
+      #split-layout {
+        display: block !important;
+      }
+
+      /* Hide sticky photo panel on mobile */
+      #sticky-photo {
+        display: none !important;
+      }
+
+      /* Full width right column */
+      #right-column {
+        width: 100% !important;
+      }
+
+      /* Reduce section padding */
+      #right-column section {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+      }
+
+      /* Hero top spacing */
+      #hero-inner {
+        padding: 10rem 1.5rem 3rem !important;
+      }
+
+      /* Feature cards: horizontal scroll */
+      div#why-grid {
+        display: flex !important;
+        grid-template-columns: unset !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 1rem !important;
+        padding-bottom: 1rem !important;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      div#why-grid > .feature-card {
+        min-width: 82vw !important;
+        max-width: 82vw !important;
+        flex-shrink: 0 !important;
+        scroll-snap-align: start;
+      }
+      div#why-grid > .feature-card:hover {
+        transform: none !important;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.04) !important;
+      }
+
+      /* Steps: full width */
+      #steps-list {
+        max-width: 100% !important;
+      }
+
+      /* Who photo: full width */
+      #partner-photo {
+        width: 100% !important;
+        height: 260px !important;
+      }
+
+      /* Footer grid: stack */
+      #footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+
+      /* Browse markets: less height on mobile */
+      #browse-markets {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     NAV
+══════════════════════════════ -->
+<nav class="nav">
+  <a href="/index.html" class="nav-logo">
+    <img src="/brand_assets/OX white logo horizontal.png" alt="Ox Strong Moving" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="#why">Why Ox Strong</a></li>
+    <li><a href="#steps">How It Works</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:1.5rem;">
+    <a href="tel:5615551234" class="nav-phone">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      (561) 555-1234
+    </a>
+    <a href="#apply" class="nav-cta">Get Franchise Info</a>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SPLIT LAYOUT: sticky left photo + scrollable right
+     (covers hero + all sections)
+══════════════════════════════════════════════════════ -->
+<div id="split-layout" style="display:grid;grid-template-columns:32% 68%;align-items:start;">
+
+  <!-- ── LEFT: sticky photo panel ── -->
+  <div id="sticky-photo" style="position:sticky;top:68px;height:calc(100vh - 68px);overflow:hidden;">
+    <img src="/brand_assets/brand photos/DSC07430.jpg" alt="Ox Strong franchise" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;" />
+    <!-- gradient overlay -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(198,45,103,0.55) 0%,rgba(238,59,125,0.15) 45%,transparent 70%);"></div>
+    <!-- bottom badge -->
+    <div style="position:absolute;bottom:2.5rem;left:2rem;right:2rem;">
+      <div style="background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-radius:14px;padding:1.25rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.18);">
+        <div style="font-family:'Montserrat',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--pink);margin-bottom:0.35rem;">Ready to own your market?</div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.05rem;color:var(--dark);line-height:1.3;">Join Florida's fastest-growing moving brand</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RIGHT: all scrollable sections ── -->
+  <div id="right-column">
+
+    <!-- HERO -->
+    <section style="position:relative;display:flex;align-items:flex-start;overflow:hidden;background:#fff;">
+      <!-- pink radial accent top-right -->
+      <div style="position:absolute;top:-120px;right:-80px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(238,59,125,0.08) 0%,transparent 70%);pointer-events:none;"></div>
+      <!-- grain -->
+      <div class="grain" style="opacity:0.045;"></div>
+      <div id="hero-inner" style="position:relative;z-index:2;padding:14rem 12.5% 7rem 5rem;width:100%;">
+
+        <!-- Headline + stats + buttons -->
+        <div style="max-width:750px;">
+          <h1 style="font-size:clamp(1.5rem,2.2vw,2.25rem);font-weight:800;color:var(--pink);line-height:1.15;letter-spacing:-0.01em;margin:0 0 1.25rem;">
+            Start a Moving Company with a Proven Franchise System
+          </h1>
+
+          <p style="font-size:1rem;line-height:1.7;color:var(--gray);margin:0 0 2rem;">
+            Ox Strong Moving is one of Florida's fastest-growing moving franchise opportunities — built around exceptional customer experiences and proven results for franchise owners. Established local moving companies have joined our system to leverage a trusted Florida brand, while entrepreneurs and experienced business professionals partner with us to capitalize on the moving industry's continued growth. If you're looking to start or scale a moving company in Florida, we bring the tools, resources, and expertise to take you there.
+          </p>
+
+          <!-- Card CTA -->
+          <a href="#apply" class="hero-cta-card" style="display:inline-block;margin-bottom:0.85rem;">
+            <strong style="display:block;font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;line-height:1.3;">Join Florida's fastest-growing moving brand.</strong>
+            <span style="display:flex;align-items:center;gap:0.35rem;font-size:0.88rem;font-weight:500;margin-top:0.25rem;">
+              Ask about starting a franchise
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- WHY OX STRONG -->
+    <section id="why" style="padding:1.5rem 12.5% 3rem 5rem;background:#fff;">
+      <h2 style="font-size:clamp(1.3rem,2vw,1.75rem);font-weight:800;color:var(--dark);letter-spacing:-0.01em;margin:0 0 0.75rem;">
+        Why Franchise with <span style="color:var(--pink);">Ox Strong Moving?</span>
+      </h2>
+      <p style="font-size:0.95rem;line-height:1.7;color:var(--gray);max-width:520px;margin:0 0 1.5rem;">
+        Ox Strong Moving has become one of Florida's most recognized moving brands. We're expanding into new markets and looking for the right operators to grow with us.
+      </p>
+      <div id="why-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;">
+        <div class="feature-card">
+          <div style="width:44px;height:44px;border-radius:10px;background:rgba(238,59,125,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--dark);margin:0 0 0.5rem;">Direct Access to Founder</h3>
+          <p style="font-size:0.85rem;line-height:1.6;color:var(--gray);margin:0;">Receive one-on-one coaching and support from the CEO to maximize your success.</p>
+        </div>
+        <div class="feature-card">
+          <div style="width:44px;height:44px;border-radius:10px;background:rgba(238,59,125,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--dark);margin:0 0 0.5rem;">Proven Business Model</h3>
+          <p style="font-size:0.85rem;line-height:1.6;color:var(--gray);margin:0;">Our playbook — pricing, hiring, marketing, ops — refined over thousands of moves. Yours from day one.</p>
+        </div>
+        <div class="feature-card">
+          <div style="width:44px;height:44px;border-radius:10px;background:rgba(238,59,125,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--dark);margin:0 0 0.5rem;">Strong Brand Recognition</h3>
+          <p style="font-size:0.85rem;line-height:1.6;color:var(--gray);margin:0;">2,000+ five-star reviews and pink trucks people can't miss. Leads come to you before you even launch.</p>
+        </div>
+        <div class="feature-card">
+          <div style="width:44px;height:44px;border-radius:10px;background:rgba(238,59,125,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--dark);margin:0 0 0.5rem;">Full Sales Team from Day 1</h3>
+          <p style="font-size:0.85rem;line-height:1.6;color:var(--gray);margin:0;">From your first opening day, you have a sales team that handles all your leads, books your moves, and schedules them in your calendar, allowing you to focus on successful operations.</p>
+        </div>
+        <div class="feature-card">
+          <div style="width:44px;height:44px;border-radius:10px;background:rgba(238,59,125,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--dark);margin:0 0 0.5rem;">Dedicated Support Team</h3>
+          <p style="font-size:0.85rem;line-height:1.6;color:var(--gray);margin:0;">Ongoing coaching in sales, staffing, dispatch, and customer experience. You're never building alone.</p>
+        </div>
+        <div class="feature-card">
+          <div style="width:44px;height:44px;border-radius:10px;background:rgba(238,59,125,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--dark);margin:0 0 0.5rem;">Exclusive Territory Rights</h3>
+          <p style="font-size:0.85rem;line-height:1.6;color:var(--gray);margin:0;">Your market is yours — protected exclusive territories so you can dominate locally without internal competition.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE OFFER -->
+    <section style="padding:3rem 12.5% 3rem 5rem;background:#fff;">
+      <h2 style="font-size:clamp(1.3rem,2vw,1.75rem);font-weight:800;color:var(--dark);letter-spacing:-0.01em;margin:0 0 0.5rem;">
+        What Is Provided to Moving Franchise <span style="color:var(--pink);">Owners in Florida?</span>
+      </h2>
+      <p style="font-size:1rem;font-weight:600;color:var(--gray);line-height:1.5;margin:0 0 1.25rem;">
+        Everything you need to launch and scale — sales support, branding, exclusive territories, and ongoing coaching.
+      </p>
+      <div style="margin-bottom:1.25rem;">
+        <details class="offer-item">
+          <summary>
+            <svg class="offer-icon-plus" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <svg class="offer-icon-check" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <h3 style="font-family:'Helvetica Neue','Helvetica',Arial,sans-serif;font-size:1.25rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--pink);margin:0;transition:opacity 0.15s;">Coaching &amp; Support</h3>
+          </summary>
+          <div class="offer-body-wrap"><p class="offer-body">From pre-opening support, to ramp up coaching, to ongoing support, our training programs equip you with the skills and knowledge to run a successful moving franchise.</p></div>
+        </details>
+        <details class="offer-item">
+          <summary>
+            <svg class="offer-icon-plus" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <svg class="offer-icon-check" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <h3 style="font-family:'Helvetica Neue','Helvetica',Arial,sans-serif;font-size:1.25rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--pink);margin:0;transition:opacity 0.15s;">Marketing Militia</h3>
+          </summary>
+          <div class="offer-body-wrap"><p class="offer-body">Drive results in your territory with assistance in national branding, digital marketing, and local strategies that generate real leads.</p></div>
+        </details>
+        <details class="offer-item">
+          <summary>
+            <svg class="offer-icon-plus" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <svg class="offer-icon-check" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <h3 style="font-family:'Helvetica Neue','Helvetica',Arial,sans-serif;font-size:1.25rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--pink);margin:0;transition:opacity 0.15s;">Branding</h3>
+          </summary>
+          <div class="offer-body-wrap"><p class="offer-body">We handle your branding, manage your social media, Google Business, and custom templates—so you can focus on growing your business.</p></div>
+        </details>
+        <details class="offer-item">
+          <summary>
+            <svg class="offer-icon-plus" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <svg class="offer-icon-check" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <h3 style="font-family:'Helvetica Neue','Helvetica',Arial,sans-serif;font-size:1.25rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--pink);margin:0;transition:opacity 0.15s;">Sales Center</h3>
+          </summary>
+          <div class="offer-body-wrap"><p class="offer-body">A dedicated team of sales professionals manages incoming leads, so you can concentrate on delivering exceptional service.</p></div>
+        </details>
+        <details class="offer-item">
+          <summary>
+            <svg class="offer-icon-plus" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <svg class="offer-icon-check" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <h3 style="font-family:'Helvetica Neue','Helvetica',Arial,sans-serif;font-size:1.25rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--pink);margin:0;transition:opacity 0.15s;">Accounting &amp; KPI</h3>
+          </summary>
+          <div class="offer-body-wrap"><p class="offer-body">Gain access to a knowledgeable team that provides expert guidance with accounting, performance reports, and supports your financial decision-making.</p></div>
+        </details>
+        <details class="offer-item">
+          <summary>
+            <svg class="offer-icon-plus" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <svg class="offer-icon-check" width="22" height="22" fill="none" stroke="var(--pink)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <h3 style="font-family:'Helvetica Neue','Helvetica',Arial,sans-serif;font-size:1.25rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--pink);margin:0;transition:opacity 0.15s;">Exclusive Territories</h3>
+          </summary>
+          <div class="offer-body-wrap"><p class="offer-body">You'll receive exclusive rights to operate in your own territory, providing the foundation for long-term growth and market success.</p></div>
+        </details>
+      </div>
+      <div>
+        <a href="#apply" class="btn-pink">Apply for Franchise Info</a>
+      </div>
+    </section>
+
+    <!-- 4 STEPS -->
+    <section id="steps" style="padding:3rem 12.5% 3rem 5rem;background:#fff;">
+      <h2 style="font-size:clamp(1.3rem,2vw,1.75rem);font-weight:800;color:var(--dark);letter-spacing:-0.01em;margin:0 0 0.5rem;">
+        How Do I Start an <span style="color:var(--pink);">Ox Strong Moving Franchise?</span>
+      </h2>
+      <p style="font-size:1rem;font-weight:600;color:var(--gray);line-height:1.5;margin:0 0 1.25rem;">
+        Five clear steps from inquiry to launch, with our team guiding you every step of the way.
+      </p>
+      <div id="steps-list" style="display:flex;flex-direction:column;gap:1.25rem;max-width:750px;">
+        <div style="display:flex;gap:1.75rem;align-items:flex-start;padding:1.25rem 1.5rem 1.1rem;border-radius:20px;background:radial-gradient(ellipse at 15% 20%,rgba(255,255,255,0.1) 0%,transparent 50%),linear-gradient(150deg,var(--pink-light) 0%,var(--pink) 100%);box-shadow:0 6px 24px rgba(238,59,125,0.22);">
+          <span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2rem;color:rgba(255,255,255,0.9);line-height:1;flex-shrink:0;margin-top:-4px;">1</span>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 0.45rem;">Initial Inquiry</h3>
+            <p style="font-size:0.9rem;line-height:1.6;color:rgba(255,255,255,0.88);margin:0 0 1rem;">Submit the form on this page. Our franchise Specialists will connect with you to discuss a franchise opportunity.</p>
+            <a href="#apply" style="display:inline-flex;align-items:center;gap:0.4rem;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:700;color:#fff;text-decoration:none;border-bottom:1.5px solid rgba(255,255,255,0.5);padding-bottom:1px;" onmouseover="this.style.borderColor='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.5)'">
+              Complete the interest form <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div style="display:flex;gap:1.75rem;align-items:flex-start;padding:1.25rem 1.5rem;border-radius:20px;background:#f4f4f4;">
+          <span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2rem;color:rgba(67,68,68,0.25);line-height:1;flex-shrink:0;margin-top:-4px;">2</span>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:700;color:var(--dark);margin:0 0 0.45rem;">Discover Ox Strong</h3>
+            <p style="font-size:0.9rem;line-height:1.6;color:var(--gray);margin:0;">Explore how our business model, franchise support, and market potential can position you for success.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:1.75rem;align-items:flex-start;padding:1.25rem 1.5rem;border-radius:20px;background:#f4f4f4;">
+          <span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2rem;color:rgba(67,68,68,0.25);line-height:1;flex-shrink:0;margin-top:-4px;">3</span>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:700;color:var(--dark);margin:0 0 0.45rem;">Review &amp; Approval</h3>
+            <p style="font-size:0.9rem;line-height:1.6;color:var(--gray);margin:0;">Following a full team introduction and financial review, we'll sign the partnership agreement.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:1.75rem;align-items:flex-start;padding:1.25rem 1.5rem;border-radius:20px;background:#f4f4f4;">
+          <span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2rem;color:rgba(67,68,68,0.25);line-height:1;flex-shrink:0;margin-top:-4px;">4</span>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:700;color:var(--dark);margin:0 0 0.45rem;">Training &amp; Launch</h3>
+            <p style="font-size:0.9rem;line-height:1.6;color:var(--gray);margin:0;">With training complete and operations in place, you're ready to open your doors and start strong.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:1.75rem;align-items:flex-start;padding:1.25rem 1.5rem;border-radius:20px;background:#f4f4f4;">
+          <span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2rem;color:rgba(67,68,68,0.25);line-height:1;flex-shrink:0;margin-top:-4px;">5</span>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:700;color:var(--dark);margin:0 0 0.45rem;">Ongoing Support</h3>
+            <p style="font-size:0.9rem;line-height:1.6;color:var(--gray);margin:0;">Receive continuous coaching as you scale operations with a team behind you driving success.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE'RE LOOKING FOR -->
+    <section style="padding:3rem 12.5% 3rem 5rem;background:#fff;">
+      <h2 style="font-size:clamp(1.3rem,2vw,1.75rem);font-weight:800;color:var(--dark);letter-spacing:-0.01em;margin:0 0 0.5rem;">
+        What Are the Requirements to Own a <span style="color:var(--pink);">Moving Franchise in Florida?</span>
+      </h2>
+      <p style="font-size:1rem;font-weight:600;color:var(--gray);line-height:1.5;margin:0 0 1.25rem;">
+        Driven, customer-first operators ready to lead a team and follow a proven system.
+      </p>
+      <!-- Photo below heading -->
+      <div id="partner-photo" style="border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);width:600px;max-width:100%;margin-bottom:1.25rem;">
+        <img src="/brand_assets/brand photos/9H6A6570.jpg" alt="Ox Strong franchise owner with customer" style="width:600px;max-width:100%;height:400px;object-fit:cover;object-position:center 40%;display:block;" />
+      </div>
+      <!-- Text content -->
+      <div>
+        <p style="font-size:0.95rem;line-height:1.7;color:var(--gray);margin:0 0 1.25rem;">
+          Our franchise owners share a commitment to quality, accountability, and customer experience. These are the qualities that matter most to us when evaluating a partner.
+        </p>
+        <ul class="check-list">
+          <li>Entrepreneurial mindset with a drive to own and grow</li>
+          <li>Customer-first attitude — you genuinely care about quality</li>
+          <li>Ability to lead, motivate, and develop a team</li>
+          <li>Willingness to follow a proven system while bringing local energy</li>
+          <li>Financial capacity to cover startup and operating capital</li>
+          <li>Prior moving, logistics, or service industry experience (a plus, not required)</li>
+        </ul>
+        <div style="margin-top:2rem;">
+          <a href="#apply" class="btn-pink">See If You Qualify</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEE US IN ACTION -->
+    <section style="padding:3rem 12.5% 3rem 5rem;background:#fff;">
+      <h2 style="font-size:clamp(1.3rem,2vw,1.75rem);font-weight:800;color:var(--dark);letter-spacing:-0.01em;margin:0 0 0.5rem;">
+        Why Do Customers Recommend <span style="color:var(--pink);">Ox Strong Moving?</span>
+      </h2>
+      <p style="font-size:1rem;font-weight:600;color:var(--gray);line-height:1.5;margin:0 0 1.25rem;">
+        Pink trucks, 2,000+ five-star reviews, and a brand people remember before you lift a single box.
+      </p>
+      <div style="position:relative;width:100%;padding-bottom:56.25%;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(238,59,125,0.15),0 4px 16px rgba(0,0,0,0.1);">
+        <iframe
+          id="ox-video"
+          data-src="https://www.youtube.com/embed/8cINEdiV784?autoplay=1&mute=1&rel=0&modestbranding=1"
+          title="Ox Strong Moving"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        </iframe>
+      </div>
+      <script>
+        (function() {
+          var iframe = document.getElementById('ox-video');
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting && !iframe.src) {
+                iframe.src = iframe.dataset.src;
+                observer.disconnect();
+              }
+            });
+          }, { threshold: 0.4 });
+          observer.observe(iframe);
+        })();
+      </script>
+    </section>
+
+    <!-- BROWSE MARKETS -->
+    <section id="browse-markets" style="padding:7rem 12.5% 7rem 5rem;background:linear-gradient(135deg,#EE3B7D 0%,#C62D67 100%);position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background-image:url('brand_assets/brand photos/_DSC1243terii.jpg');background-size:cover;background-position:center 70%;opacity:0.45;pointer-events:none;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(238,59,125,0.92) 0%,rgba(238,59,125,0.75) 45%,rgba(238,59,125,0.3) 70%,rgba(238,59,125,0.0) 100%);pointer-events:none;"></div>
+      <h2 style="font-size:clamp(1.6rem,2.5vw,2.25rem);font-weight:800;color:#fff;letter-spacing:-0.01em;line-height:1.15;margin:0 0 1.25rem;position:relative;">
+        Browse Available Markets To Find a Fit For You
+      </h2>
+      <a href="#" style="display:inline-flex;align-items:center;gap:0.5rem;background:#fff;color:var(--pink);font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:0.85rem 2rem;border-radius:100px;box-shadow:0 0 0 4px rgba(255,255,255,0.25),0 8px 32px rgba(0,0,0,0.2),0 2px 8px rgba(0,0,0,0.12);transition:transform 0.2s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.2s ease;position:relative;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 0 0 6px rgba(255,255,255,0.35),0 12px 40px rgba(0,0,0,0.28),0 4px 12px rgba(0,0,0,0.16)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 0 0 4px rgba(255,255,255,0.25),0 8px 32px rgba(0,0,0,0.2),0 2px 8px rgba(0,0,0,0.12)';">
+        See Territories
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </section>
+
+    <!-- LEAD CAPTURE FORM -->
+    <section id="apply" style="padding:3rem 12.5% 3rem 5rem;background:#fff;position:relative;overflow:hidden;scroll-margin-top:80px;">
+      <h2 style="font-size:clamp(1.3rem,2vw,1.75rem);font-weight:800;color:var(--dark);letter-spacing:-0.01em;margin:0 0 0.5rem;">
+        How Do I Apply for an <span style="color:var(--pink);">Ox Strong Moving Franchise?</span>
+      </h2>
+      <p style="font-size:1rem;font-weight:600;color:var(--gray);line-height:1.5;margin:0 0 1.25rem;">
+        Apply today — our franchise team responds within 24 hours.
+      </p>
+      <div style="background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:20px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.06);position:relative;z-index:1;">
+        <form onsubmit="return false;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
+            <div>
+              <label class="form-label">First Name *</label>
+              <input class="form-input" type="text" placeholder="First name" />
+            </div>
+            <div>
+              <label class="form-label">Last Name *</label>
+              <input class="form-input" type="text" placeholder="Last name" />
+            </div>
+          </div>
+          <div style="margin-bottom:0.75rem;">
+            <label class="form-label">Email Address *</label>
+            <input class="form-input" type="email" placeholder="your@email.com" />
+          </div>
+          <div style="margin-bottom:0.75rem;">
+            <label class="form-label">Phone Number *</label>
+            <input class="form-input" type="tel" placeholder="(555) 000-0000" />
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
+            <div>
+              <label class="form-label">Desired Market / City *</label>
+              <input class="form-input" type="text" placeholder="e.g. Tampa, FL" />
+            </div>
+            <div>
+              <label class="form-label">Available Investment</label>
+              <select class="form-input">
+                <option value="">Select range</option>
+                <option value="under25k">Under $25,000</option>
+                <option value="25-50k">$25,000 – $50,000</option>
+                <option value="50-100k">$50,000 – $100,000</option>
+                <option value="over100k">$100,000+</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-bottom:1.25rem;">
+            <label class="form-label">Tell us about yourself</label>
+            <textarea class="form-input" rows="3" placeholder="Brief background — experience, why Ox Strong, any questions..." style="resize:vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn-pink" style="width:100%;justify-content:center;font-size:1rem;padding:1rem;">
+            Submit My Application
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p style="text-align:center;font-size:0.72rem;color:#aaa;margin:0.85rem 0 0;">Your information is secure and will never be shared.</p>
+        </form>
+      </div>
+    </section>
+
+  </div><!-- end right column -->
+</div><!-- end split layout -->
+
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer style="background:#EE3B7D;padding:4rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.15);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div id="footer-grid" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;">
+      <!-- Brand -->
+      <div>
+        <img src="/brand_assets/OX white logo horizontal.png" alt="Ox Strong Moving" style="height:64px;width:auto;margin-bottom:1.5rem;" />
+        <p style="font-size:0.88rem;line-height:1.7;color:rgba(255,255,255,0.8);max-width:300px;margin:0 0 1.5rem;">
+          South Florida's trusted movers. Serving Palm Beach, Broward, and Miami-Dade. Licensed, insured, and available 7 days a week — 7am to 9pm.
+        </p>
+        <div style="display:flex;gap:0.75rem;">
+          <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.35)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.557z"/></svg>
+          </a>
+          <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.35)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.35)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Services -->
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.85rem;color:#fff;margin:0 0 1.25rem;letter-spacing:0.05em;text-transform:uppercase;">Services</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
+          <li><a href="#" style="font-size:0.875rem;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Local Moves</a></li>
+          <li><a href="#" style="font-size:0.875rem;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Long Distance</a></li>
+          <li><a href="#" style="font-size:0.875rem;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Office Moves</a></li>
+          <li><a href="#" style="font-size:0.875rem;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Packing Services</a></li>
+          <li><a href="#" style="font-size:0.875rem;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Storage Solutions</a></li>
+        </ul>
+      </div>
+      <!-- Company -->
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.85rem;color:#fff;margin:0 0 1.25rem;letter-spacing:0.05em;text-transform:uppercase;">Company</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
+          <li><a href="/index.html" style="font-size:0.875rem;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">About Us</a></li>
+          <li><a href="#why" style="font-size:0.875rem;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Why Ox Strong</a></li>
+          <li><a href="#steps" style="font-size:0.875rem;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">How It Works</a></li>
+          <li><a href="#apply" style="font-size:0.875rem;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Apply</a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.85rem;color:#fff;margin:0 0 1.25rem;letter-spacing:0.05em;text-transform:uppercase;">Contact</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
+          <li style="display:flex;align-items:flex-start;gap:0.5rem;">
+            <svg width="14" height="14" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:2px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            <a href="tel:5615551234" style="font-size:0.875rem;color:rgba(255,255,255,0.8);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">(561) 555-1234</a>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:0.5rem;">
+            <svg width="14" height="14" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <a href="mailto:hello@oxstrongmoving.com" style="font-size:0.875rem;color:rgba(255,255,255,0.8);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">hello@oxstrongmoving.com</a>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:0.5rem;">
+            <svg width="14" height="14" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span style="font-size:0.875rem;color:rgba(255,255,255,0.8);line-height:1.5;">South Florida &amp; Surrounding Areas</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <div style="border-top:1px solid rgba(255,255,255,0.25);padding-top:1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+      <p style="font-size:0.78rem;color:rgba(255,255,255,0.65);margin:0;">© 2026 Ox Strong Moving. All rights reserved. Franchise offerings made by prospectus only.</p>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="#" style="font-size:0.78rem;color:rgba(255,255,255,0.65);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">Privacy Policy</a>
+        <a href="#" style="font-size:0.78rem;color:rgba(255,255,255,0.65);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.offer-item').forEach(function(details) {
+    details.querySelector('summary').addEventListener('click', function(e) {
+      if (!details.open) return; // opening — let browser handle normally
+      e.preventDefault();
+      details.classList.add('closing');
+      setTimeout(function() {
+        details.classList.remove('closing');
+        details.removeAttribute('open');
+      }, 320);
+    });
+  });
+</script>
+</body>
+</html>
