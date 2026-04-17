@@ -442,8 +442,15 @@
       }
 
       /* Hero top spacing */
+      #hero-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
       #hero-inner {
         padding: 10rem 1.5rem 3rem !important;
+      }
+      #hero-section h1 {
+        font-size: 2rem !important;
       }
 
       /* Feature cards: horizontal scroll */
@@ -545,7 +552,7 @@
   <div id="right-column">
 
     <!-- HERO -->
-    <section style="position:relative;display:flex;align-items:flex-start;overflow:hidden;background:#fff;">
+    <section id="hero-section" style="position:relative;display:flex;align-items:flex-start;overflow:hidden;background:#fff;">
       <!-- pink radial accent top-right -->
       <div style="position:absolute;top:-120px;right:-80px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(238,59,125,0.08) 0%,transparent 70%);pointer-events:none;"></div>
       <!-- grain -->
