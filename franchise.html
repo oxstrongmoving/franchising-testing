@@ -559,12 +559,10 @@
   <div id="right-column">
 
     <!-- MOBILE PHOTO HEADER (hidden on desktop, shown on mobile) -->
-    <div id="mobile-photo-header" style="display:none;position:relative;width:100%;margin-top:68px;overflow:hidden;">
-      <img src="brand_assets/brand photos/3_trucks-3.jpg" alt="Ox Strong Moving trucks" style="width:100%;height:300px;object-fit:cover;object-position:center 50%;" />
+    <div id="mobile-photo-header" style="display:none;position:relative;width:100%;margin-top:68px;margin-bottom:-60px;z-index:2;-webkit-mask-image:linear-gradient(to bottom,black 45%,transparent 100%);mask-image:linear-gradient(to bottom,black 45%,transparent 100%);">
+      <img src="brand_assets/brand photos/3_trucks-3.jpg" alt="Ox Strong Moving trucks" style="width:100%;height:320px;object-fit:cover;object-position:center 50%;" />
       <!-- pink gradient — solid brand pink throughout for legibility -->
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(238,59,125,0.52) 0%,rgba(238,59,125,0.80) 100%);"></div>
-      <!-- white fade — covers bottom third, blends cleanly into hero -->
-      <div style="position:absolute;bottom:0;left:0;right:0;height:35%;background:linear-gradient(to bottom,transparent 0%,#fff 100%);"></div>
       <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem 1.75rem 2rem;">
         <p style="font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:rgba(255,255,255,0.88);margin:0 0 0.45rem;line-height:1.4;">Start a moving company with a</p>
         <h1 style="font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:#fff;line-height:1.15;margin:0;letter-spacing:-0.02em;">Proven Franchise System</h1>
@@ -572,7 +570,7 @@
     </div>
 
     <!-- HERO -->
-    <section id="hero-section" style="position:relative;display:flex;align-items:flex-start;overflow:hidden;background:#fff;">
+    <section id="hero-section" style="position:relative;z-index:1;display:flex;align-items:flex-start;overflow:hidden;background:#fff;">
       <!-- pink radial accent top-right -->
       <div style="position:absolute;top:-120px;right:-80px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(238,59,125,0.08) 0%,transparent 70%);pointer-events:none;"></div>
       <!-- grain -->
